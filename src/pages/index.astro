@@ -1,5 +1,5 @@
 ---
-const year = new Date().getFullYear();
+const substackUrl = "https://ayana301405.substack.com/";
 
 const projects = [
   {
@@ -39,11 +39,11 @@ const projects = [
     />
     <meta
       name="description"
-      content="Ayana Ahuja — software engineering, quantitative systems, solutions engineering, and selected creative work."
+      content="Ayana Ahuja — software engineering, quantitative systems, solutions engineering, research, and selected work."
     />
-    <meta name="theme-color" content="#efe6d1" />
+    <meta name="theme-color" content="#ffffff" />
 
-    <title>Ayana Ahuja — Portfolio & Selected Works</title>
+    <title>Ayana Ahuja — Independent Edition</title>
   </head>
 
   <body>
@@ -52,18 +52,23 @@ const projects = [
     <div class="page-shell">
       <header class="site-header">
         <div class="issue-line">
-          <span>Vol. I · Issue 01</span>
-          <span>California</span>
-          <span>{year}</span>
+          <span>Independent Edition</span>
         </div>
 
         <div class="masthead-row">
-          <a class="masthead" href="/" aria-label="Ayana Ahuja home">
-            Ayana Ahuja
-          </a>
+          <div class="masthead-identity">
+            <a class="masthead" href="/" aria-label="Ayana Ahuja home">
+              Ayana Ahuja
+            </a>
+
+            <p class="location-line">
+              <span aria-hidden="true">📍</span>
+              San Francisco
+            </p>
+          </div>
 
           <p class="masthead-note">
-            Software engineering, systems, words &amp; sound
+            Systems | Solutions | Research | Development
           </p>
         </div>
 
@@ -71,6 +76,13 @@ const projects = [
           <a href="#work">Selected work</a>
           <a href="#about">About</a>
           <a href="#current">Current focus</a>
+          <a
+            href={substackUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Writing ↗
+          </a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -84,15 +96,15 @@ const projects = [
             </div>
 
             <h1 id="hero-title">
-              Systems, stories,
-              <span class="accent-word">signals</span>
-              <span class="headline-tail">and the spaces between them.</span>
+              Building systems and designing
+              <span class="accent-word">solutions</span>
+              <span class="headline-tail">for complex problems.</span>
             </h1>
 
             <p class="dek">
-              I’m Ayana. I’m interested in quantitative systems, solutions
-              engineering, and the work of translating complicated ideas into
-              something clear, useful, and human.
+              Hi, I’m Ayana :) I’m interested in quantitative systems,
+              solutions engineering, and the work of translating complicated
+              ideas into something clear, useful, and human.
             </p>
 
             <div class="hero-actions">
@@ -108,22 +120,23 @@ const projects = [
 
             <div class="byline">
               <span>Written &amp; designed by Ayana Ahuja</span>
-              <span>Last revised · {year}</span>
             </div>
           </div>
 
-          <figure class="hero-illustration">
+          <figure class="hero-illustration tilt-surface" data-tilt="hero">
             <figcaption>
-              Fig. 01 — A study in rhythm, probability, and systems
+              Fig. 01 — Structure, rhythm, and technical systems
             </figcaption>
 
+            <div class="red-print red-print-one" aria-hidden="true"></div>
+            <div class="red-print red-print-two" aria-hidden="true"></div>
             <div class="score-lines" aria-hidden="true"></div>
 
             <svg
               class="signal-art"
               viewBox="0 0 760 620"
               role="img"
-              aria-label="Abstract line illustration combining a waveform, orbital paths, musical notation, and technical markings"
+              aria-label="Layered line illustration combining a waveform, orbital paths, musical notation, and technical systems"
             >
               <defs>
                 <linearGradient
@@ -136,8 +149,8 @@ const projects = [
                 >
                   <stop stop-color="#1b1915" stop-opacity="0" />
                   <stop offset="0.18" stop-color="#1b1915" />
-                  <stop offset="0.68" stop-color="#7b2f2f" />
-                  <stop offset="1" stop-color="#7b2f2f" stop-opacity="0" />
+                  <stop offset="0.68" stop-color="#9b1212" />
+                  <stop offset="1" stop-color="#9b1212" stop-opacity="0" />
                 </linearGradient>
 
                 <filter id="roughen">
@@ -173,7 +186,7 @@ const projects = [
                 rx="300"
                 ry="105"
                 fill="none"
-                stroke="#7b2f2f"
+                stroke="#9b1212"
                 stroke-opacity="0.58"
                 stroke-width="1.4"
                 transform="rotate(18 390 315)"
@@ -213,7 +226,7 @@ const projects = [
                 cx="390"
                 cy="315"
                 r="67"
-                fill="#efe6d1"
+                fill="#ffffff"
                 stroke="#1b1915"
                 stroke-width="1.6"
               />
@@ -222,7 +235,7 @@ const projects = [
                 x="390"
                 y="334"
                 text-anchor="middle"
-                fill="#7b2f2f"
+                fill="#9b1212"
                 font-family="Georgia, serif"
                 font-size="64"
                 font-style="italic"
@@ -235,20 +248,20 @@ const projects = [
                 font-family="'Courier New', monospace"
                 font-size="13"
               >
-                <text x="76" y="94">frequency / form</text>
-                <text x="535" y="112">μ = E[X]</text>
-                <text x="84" y="528">~~~~~~</text>
-                <text x="535" y="520">signal ≠ certainty</text>
+                <text x="76" y="94">structure / rhythm</text>
+                <text x="535" y="112">logic / probability</text>
+                <text x="84" y="528">design / development</text>
+                <text x="535" y="520">systems / solutions</text>
               </g>
 
               <g
-                fill="#7b2f2f"
+                fill="#9b1212"
                 font-family="Georgia, serif"
                 font-size="28"
                 font-style="italic"
               >
-                <text x="142" y="170">andante</text>
-                <text x="550" y="452">probability</text>
+                <text x="142" y="170">tempo</text>
+                <text x="550" y="452">pattern</text>
               </g>
 
               <g
@@ -293,7 +306,7 @@ const projects = [
           <div class="project-list">
             {
               projects.map((project) => (
-                <article class="project-card">
+                <article class="project-card tilt-surface" data-tilt="card">
                   <div class="project-index">
                     <span>{project.number}</span>
                     <span>{project.status}</span>
@@ -322,6 +335,7 @@ const projects = [
         <section class="section about-section" id="about">
           <div class="about-heading">
             <p class="section-number">Section II</p>
+
             <h2>
               I’m interested in systems, but also in what systems mean to
               people.
@@ -345,17 +359,20 @@ const projects = [
 
               <p>
                 Music and literature shape how I notice rhythm, structure, and
-                interpretation. They are not separate from my technical work;
-                they influence how I organize information and explain ideas.
+                interpretation. That sensibility carries into my technical
+                work, influencing how I organize systems, communicate ideas,
+                and shape the visual language of this portfolio.
               </p>
             </div>
 
             <aside class="pull-quote">
               <span class="quote-mark" aria-hidden="true">“</span>
+
               <blockquote>
                 The goal is not to make complexity disappear. It is to make it
                 navigable.
               </blockquote>
+
               <p>— working principle</p>
             </aside>
           </div>
@@ -401,36 +418,203 @@ const projects = [
           </div>
         </section>
 
-        <section class="contact-section" id="contact">
-          <div>
-            <p class="section-number">Correspondence</p>
-            <h2>Let’s exchange ideas.</h2>
+        <section class="section writing-section" id="writing">
+          <div class="writing-label">
+            <p class="section-number">Section IV</p>
+            <p class="section-label">Field notes</p>
           </div>
 
-          <div class="contact-copy">
+          <div class="writing-copy">
+            <p class="edition-tag">Published in The Human Variable</p>
+
+            <h2>
+              Longer thoughts, observations, and work in progress.
+            </h2>
+
             <p>
-              I’m open to conversations about internships, technical projects,
-              quantitative systems, solutions engineering, and collaborative
-              work.
+              My writing is a separate space for ideas that need more room than
+              a project card: reflections, research notes, creative work, and
+              questions I am still thinking through.
             </p>
 
-            <a class="email-link" href="mailto:your-email@example.com">
-             ayana070907@gmail.com
+            <a
+              class="substack-link"
+              href={substackUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read The Human Variable
               <span aria-hidden="true">↗</span>
             </a>
+          </div>
 
-            <p class="contact-note">
-              Replace this placeholder with your real email before publishing.
+          <div class="writing-mark" aria-hidden="true">
+            <span>&lt;/&gt;</span>
+            <span>¶</span>
+            <span>∞</span>
+          </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+          <div class="contact-intro">
+            <p class="section-number">Correspondence</p>
+            <h2>Let’s exchange ideas.</h2>
+
+            <p>
+              I’m always open to a good conversation. Reach out about
+              internships, technical projects, quantitative systems, solutions
+              engineering, collaborative art or technology ideas, or simply to
+              exchange thoughts.
+            </p>
+
+            <p>
+              I’m especially interested in connecting with people who care
+              about youth mental health advocacy and encouraging more girls to
+              pursue STEM.
             </p>
           </div>
+
+          <form
+            class="contact-form"
+            name="portfolio-contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            data-netlify-recaptcha="true"
+          >
+            <input
+              type="hidden"
+              name="form-name"
+              value="portfolio-contact"
+            />
+
+            <p class="form-hidden">
+              <label>
+                Leave this field empty if you are human:
+                <input
+                  type="text"
+                  name="bot-field"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </label>
+            </p>
+
+            <div class="form-grid">
+              <label>
+                <span>Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  required
+                />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+            </div>
+
+            <label>
+              <span>What would you like to discuss?</span>
+
+              <select name="topic" required>
+                <option value="" selected disabled>Select a topic</option>
+                <option value="internship">Internship or opportunity</option>
+                <option value="technical-project">Technical project</option>
+                <option value="quantitative-systems">
+                  Quantitative systems
+                </option>
+                <option value="solutions-engineering">
+                  Solutions engineering
+                </option>
+                <option value="advocacy">
+                  Youth mental health or girls in STEM
+                </option>
+                <option value="creative-collaboration">
+                  Art or technology collaboration
+                </option>
+                <option value="other">Something else</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Message</span>
+
+              <textarea
+                name="message"
+                rows="7"
+                required
+              ></textarea>
+            </label>
+
+            <div
+              class="captcha-wrap"
+              data-netlify-recaptcha="true"
+            ></div>
+
+            <div class="form-footer">
+              <p>
+                Protected with spam filtering, a hidden bot trap, and human
+                verification after deployment.
+              </p>
+
+              <button type="submit">
+                Send correspondence
+                <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </form>
         </section>
       </main>
 
       <footer>
-        <span>© {year} Ayana Ahuja</span>
+        <span>© Ayana Ahuja</span>
         <span>Typeset for the web · Built with Astro</span>
       </footer>
     </div>
+
+    <script>
+      const tiltItems = document.querySelectorAll<HTMLElement>("[data-tilt]");
+
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+
+      if (!reducedMotion) {
+        tiltItems.forEach((item) => {
+          const isHero = item.dataset.tilt === "hero";
+          const maxTilt = isHero ? 7 : 2.5;
+
+          item.addEventListener("pointermove", (event) => {
+            const bounds = item.getBoundingClientRect();
+            const x = (event.clientX - bounds.left) / bounds.width;
+            const y = (event.clientY - bounds.top) / bounds.height;
+            const rotateY = (x - 0.5) * maxTilt * 2;
+            const rotateX = (0.5 - y) * maxTilt * 2;
+
+            item.style.setProperty("--tilt-x", `${rotateX}deg`);
+            item.style.setProperty("--tilt-y", `${rotateY}deg`);
+            item.style.setProperty("--pointer-x", `${x * 100}%`);
+            item.style.setProperty("--pointer-y", `${y * 100}%`);
+          });
+
+          item.addEventListener("pointerleave", () => {
+            item.style.setProperty("--tilt-x", "0deg");
+            item.style.setProperty("--tilt-y", "0deg");
+            item.style.setProperty("--pointer-x", "50%");
+            item.style.setProperty("--pointer-y", "50%");
+          });
+        });
+      }
+    </script>
   </body>
 </html>
 
@@ -449,22 +633,28 @@ const projects = [
     margin: 0;
     min-width: 320px;
     overflow-x: hidden;
-    background: #efe6d1;
-    color: #1b1915;
+    background: #ffffff;
+    color: #161616;
     font-family: "Newsreader", Georgia, serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
 
-  :global(body::selection),
   :global(::selection) {
-    background: #7b2f2f;
-    color: #fff8e9;
+    background: #161616;
+    color: #ffffff;
   }
 
   :global(a) {
     color: inherit;
     text-decoration: none;
+  }
+
+  :global(button),
+  :global(input),
+  :global(select),
+  :global(textarea) {
+    font: inherit;
   }
 
   :global(button),
@@ -481,21 +671,37 @@ const projects = [
     background-image:
       repeating-linear-gradient(
         0deg,
-        rgba(27, 25, 21, 0.018) 0,
-        rgba(27, 25, 21, 0.018) 1px,
+        rgba(22, 22, 22, 0.014) 0,
+        rgba(22, 22, 22, 0.014) 1px,
         transparent 1px,
         transparent 5px
       ),
-      radial-gradient(
-        circle at 15% 8%,
-        rgba(123, 47, 47, 0.07),
-        transparent 30rem
-      ),
-      radial-gradient(
-        circle at 88% 24%,
-        rgba(37, 55, 62, 0.06),
-        transparent 27rem
-      );
+      radial-gradient(circle at 7% 14%, rgba(155, 18, 18, 0.08), transparent 17rem),
+      radial-gradient(circle at 93% 82%, rgba(155, 18, 18, 0.07), transparent 20rem);
+  }
+
+  .paper-noise::before,
+  .paper-noise::after {
+    position: absolute;
+    content: "";
+    border: 1px solid rgba(155, 18, 18, 0.42);
+    pointer-events: none;
+  }
+
+  .paper-noise::before {
+    top: 88px;
+    left: -38px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(20deg);
+  }
+
+  .paper-noise::after {
+    right: -48px;
+    bottom: 85px;
+    width: 190px;
+    height: 86px;
+    transform: rotate(-15deg);
   }
 
   .page-shell {
@@ -505,56 +711,72 @@ const projects = [
 
   .site-header {
     position: relative;
-    padding-top: 18px;
+    padding-top: 10px;
   }
 
   .issue-line {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 20px;
-    padding: 8px 0;
-    border-top: 1px solid #1b1915;
-    border-bottom: 1px solid rgba(27, 25, 21, 0.48);
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    border-top: 1px solid #161616;
+    border-bottom: 1px solid rgba(22, 22, 22, 0.52);
     font-family: "IBM Plex Mono", monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .issue-line span:nth-child(2) {
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
     text-align: center;
-  }
-
-  .issue-line span:last-child {
-    text-align: right;
+    text-transform: uppercase;
   }
 
   .masthead-row {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: end;
-    gap: 30px;
-    padding: 18px 0 13px;
-    border-bottom: 4px double #1b1915;
+    gap: 24px;
+    padding: 11px 0 9px;
+    border-bottom: 4px double #161616;
+  }
+
+  .masthead-identity {
+    display: grid;
+    justify-items: start;
+    gap: 4px;
   }
 
   .masthead {
-    font-size: clamp(3.2rem, 7vw, 6.8rem);
+    font-size: clamp(2.9rem, 5.7vw, 5.5rem);
     font-weight: 500;
-    letter-spacing: -0.075em;
-    line-height: 0.82;
+    letter-spacing: -0.07em;
+    line-height: 0.86;
   }
 
   .masthead-note {
-    max-width: 260px;
-    margin: 0 0 5px;
-    color: #655e51;
+    max-width: 360px;
+    margin: 0 0 3px;
+    color: #333;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 0.62rem;
+    font-size: 0.58rem;
     letter-spacing: 0.08em;
-    line-height: 1.6;
+    line-height: 1.45;
     text-align: right;
     text-transform: uppercase;
+  }
+
+  .location-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    color: #4b4b4b;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .location-line span {
+    font-size: 0.95rem;
+    line-height: 1;
   }
 
   nav {
@@ -563,17 +785,17 @@ const projects = [
     z-index: 20;
     display: flex;
     justify-content: center;
-    gap: 34px;
-    padding: 11px 0 10px;
-    border-bottom: 1px solid #1b1915;
-    background: rgba(239, 230, 209, 0.94);
+    gap: 28px;
+    padding: 8px 0 7px;
+    border-bottom: 1px solid #161616;
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(10px);
   }
 
   nav a {
     position: relative;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 0.66rem;
+    font-size: 0.64rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
@@ -585,7 +807,7 @@ const projects = [
     left: 0;
     height: 1px;
     content: "";
-    background: #7b2f2f;
+    background: #9b1212;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 180ms ease;
@@ -598,12 +820,12 @@ const projects = [
 
   .hero {
     display: grid;
-    min-height: 720px;
-    grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
+    min-height: 750px;
+    grid-template-columns: minmax(0, 1.03fr) minmax(380px, 0.97fr);
     align-items: center;
     gap: 68px;
     padding: 70px 0 76px;
-    border-bottom: 4px double #1b1915;
+    border-bottom: 4px double #161616;
   }
 
   .hero-copy {
@@ -615,7 +837,7 @@ const projects = [
     align-items: center;
     gap: 10px;
     margin-bottom: 24px;
-    color: #655e51;
+    color: #4f4f4f;
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.66rem;
     font-weight: 500;
@@ -626,7 +848,7 @@ const projects = [
   .kicker-mark {
     width: 21px;
     height: 1px;
-    background: #7b2f2f;
+    background: #9b1212;
   }
 
   h1,
@@ -639,15 +861,20 @@ const projects = [
   h1 {
     max-width: 760px;
     margin-bottom: 28px;
-    font-size: clamp(4.4rem, 7.4vw, 7.4rem);
+    font-size: clamp(4.3rem, 7.1vw, 7.1rem);
     font-weight: 400;
     letter-spacing: -0.075em;
     line-height: 0.82;
   }
 
   .accent-word {
-    color: #7b2f2f;
+    display: inline-block;
+    padding: 0 0.08em 0.02em;
+    background: rgba(94, 94, 94, 0.16);
+    color: #161616;
     font-style: italic;
+    text-decoration: none;
+    transform: rotate(-1deg);
   }
 
   .headline-tail {
@@ -658,8 +885,8 @@ const projects = [
     max-width: 650px;
     margin-bottom: 30px;
     padding-top: 21px;
-    border-top: 1px solid rgba(27, 25, 21, 0.48);
-    color: #49443b;
+    border-top: 1px solid rgba(22, 22, 22, 0.5);
+    color: #3d3d3d;
     font-size: clamp(1.08rem, 1.55vw, 1.28rem);
     line-height: 1.58;
   }
@@ -667,7 +894,7 @@ const projects = [
   .dek::first-letter {
     float: left;
     margin: 8px 8px 0 0;
-    color: #7b2f2f;
+    color: #9b1212;
     font-size: 3.8rem;
     line-height: 0.7;
   }
@@ -686,7 +913,7 @@ const projects = [
     justify-content: center;
     gap: 12px;
     padding: 0 18px;
-    border: 1px solid #1b1915;
+    border: 1px solid #161616;
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.68rem;
     font-weight: 500;
@@ -704,8 +931,8 @@ const projects = [
   }
 
   .button-dark {
-    background: #1b1915;
-    color: #f7efdc;
+    background: #161616;
+    color: #ffffff;
   }
 
   .button-light {
@@ -714,8 +941,8 @@ const projects = [
 
   .button-light:hover,
   .button-light:focus-visible {
-    background: #7b2f2f;
-    color: #f7efdc;
+    background: #161616;
+    color: #ffffff;
   }
 
   .byline {
@@ -724,26 +951,55 @@ const projects = [
     justify-content: space-between;
     gap: 8px 20px;
     padding-top: 13px;
-    border-top: 1px solid rgba(27, 25, 21, 0.28);
-    color: #71695b;
+    border-top: 1px solid rgba(22, 22, 22, 0.3);
+    color: #595959;
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.57rem;
     letter-spacing: 0.07em;
     text-transform: uppercase;
   }
 
+  .tilt-surface {
+    --tilt-x: 0deg;
+    --tilt-y: 0deg;
+    --pointer-x: 50%;
+    --pointer-y: 50%;
+    transform: perspective(1100px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+    transform-style: preserve-3d;
+    transition: transform 170ms ease, box-shadow 170ms ease;
+    will-change: transform;
+  }
+
   .hero-illustration {
     position: relative;
     min-width: 0;
-    min-height: 610px;
+    min-height: 630px;
     margin: 0;
     overflow: hidden;
-    border: 1px solid #1b1915;
-    background: #e5dac1;
+    border: 1px solid #161616;
+    background:
+      radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(155, 18, 18, 0.1), transparent 13rem),
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 35px,
+        rgba(22, 22, 22, 0.07) 35px,
+        rgba(22, 22, 22, 0.07) 36px
+      ),
+      #ffffff;
     box-shadow:
-      11px 11px 0 rgba(27, 25, 21, 0.09),
-      inset 0 0 0 8px #efe6d1,
-      inset 0 0 0 9px #1b1915;
+      14px 14px 0 rgba(155, 18, 18, 0.16),
+      24px 24px 0 rgba(22, 22, 22, 0.08),
+      inset 0 0 0 8px #ffffff,
+      inset 0 0 0 9px #161616;
+  }
+
+  .hero-illustration:hover {
+    box-shadow:
+      18px 18px 0 rgba(155, 18, 18, 0.2),
+      30px 30px 0 rgba(22, 22, 22, 0.08),
+      inset 0 0 0 8px #ffffff,
+      inset 0 0 0 9px #161616;
   }
 
   .hero-illustration figcaption {
@@ -753,31 +1009,71 @@ const projects = [
     left: 22px;
     z-index: 4;
     padding-bottom: 9px;
-    border-bottom: 1px solid rgba(27, 25, 21, 0.42);
-    color: #5e574a;
+    border-bottom: 1px solid rgba(22, 22, 22, 0.48);
+    color: #333;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 0.56rem;
+    font-size: 0.55rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    transform: translateZ(52px);
   }
 
   .score-lines {
     position: absolute;
-    inset: 80px 18px 62px;
+    inset: 78px 18px 62px;
     background: repeating-linear-gradient(
       to bottom,
       transparent 0,
       transparent 35px,
-      rgba(27, 25, 21, 0.09) 35px,
-      rgba(27, 25, 21, 0.09) 36px
+      rgba(22, 22, 22, 0.07) 35px,
+      rgba(22, 22, 22, 0.07) 36px
     );
+    transform: translateZ(10px);
+  }
+
+  .red-print {
+    position: absolute;
+    z-index: 1;
+    border: 1px solid rgba(155, 18, 18, 0.72);
+    pointer-events: none;
+  }
+
+  .red-print-one {
+    top: 94px;
+    right: 30px;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 8px #fff, inset 0 0 0 9px rgba(155, 18, 18, 0.35);
+    transform: translateZ(35px);
+  }
+
+  .red-print-two {
+    bottom: 84px;
+    left: 34px;
+    width: 120px;
+    height: 48px;
+    transform: translateZ(25px) rotate(-10deg);
   }
 
   .signal-art {
     position: absolute;
-    inset: 61px 4% 54px;
-    width: 92%;
-    height: calc(100% - 115px);
+    inset: 60px 3% 54px;
+    z-index: 2;
+    width: 94%;
+    height: calc(100% - 114px);
+    transform: translateZ(70px);
+    filter: contrast(1.08);
+  }
+
+  .signal-art ellipse:nth-of-type(2) {
+    stroke: #9b1212;
+    fill: none;
+  }
+
+  .signal-art text[fill="#9b1212"] {
+    stroke: none;
+    fill: #9b1212;
   }
 
   .figure-footer {
@@ -789,17 +1085,18 @@ const projects = [
     justify-content: space-between;
     gap: 16px;
     padding-top: 9px;
-    border-top: 1px solid rgba(27, 25, 21, 0.42);
-    color: #5e574a;
+    border-top: 1px solid rgba(22, 22, 22, 0.48);
+    color: #454545;
     font-family: "IBM Plex Mono", monospace;
-    font-size: 0.54rem;
+    font-size: 0.53rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    transform: translateZ(48px);
   }
 
   .section {
     padding: 105px 0;
-    border-bottom: 1px solid #1b1915;
+    border-bottom: 1px solid #161616;
   }
 
   .section-heading {
@@ -823,15 +1120,17 @@ const projects = [
   }
 
   .section-number {
-    color: #7b2f2f;
+    color: #9b1212;
+    font-weight: 500;
   }
 
   .section-label {
-    color: #655e51;
+    color: #555;
   }
 
   .section-heading h2,
   .about-heading h2,
+  .writing-section h2,
   .contact-section h2 {
     margin-bottom: 0;
     font-size: clamp(3.2rem, 5.7vw, 6rem);
@@ -841,7 +1140,7 @@ const projects = [
   }
 
   .project-list {
-    border-top: 1px solid #1b1915;
+    border-top: 1px solid #161616;
   }
 
   .project-card {
@@ -850,16 +1149,20 @@ const projects = [
     gap: 35px;
     align-items: end;
     padding: 34px 0;
-    border-bottom: 1px solid rgba(27, 25, 21, 0.46);
+    border-bottom: 1px solid rgba(22, 22, 22, 0.5);
+    transform-origin: center;
     transition:
       padding 180ms ease,
-      background 180ms ease;
+      background 180ms ease,
+      box-shadow 180ms ease,
+      transform 170ms ease;
   }
 
   .project-card:hover {
     padding-right: 18px;
     padding-left: 18px;
-    background: rgba(123, 47, 47, 0.045);
+    background: rgba(155, 18, 18, 0.045);
+    box-shadow: 8px 8px 0 rgba(155, 18, 18, 0.1);
   }
 
   .project-index {
@@ -875,19 +1178,27 @@ const projects = [
   }
 
   .project-index span:first-child {
-    color: #7b2f2f;
-    font-size: 1rem;
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid #161616;
+    background: #9b1212;
+    color: #ffffff;
+    font-size: 0.75rem;
+    box-shadow: 5px 5px 0 rgba(22, 22, 22, 0.16);
   }
 
   .project-index span:last-child {
-    color: #70685a;
+    color: #555;
   }
 
   .project-category {
     margin-bottom: 8px;
-    color: #7b2f2f;
+    color: #161616;
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.59rem;
+    font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
@@ -903,7 +1214,7 @@ const projects = [
   .project-body > p:last-child {
     max-width: 690px;
     margin-bottom: 0;
-    color: #514b40;
+    color: #404040;
     font-size: 1.02rem;
     line-height: 1.6;
   }
@@ -920,7 +1231,6 @@ const projects = [
   }
 
   .project-link span {
-    color: #7b2f2f;
     font-size: 1rem;
   }
 
@@ -942,12 +1252,12 @@ const projects = [
   .about-copy {
     columns: 2;
     column-gap: 34px;
-    column-rule: 1px solid rgba(27, 25, 21, 0.28);
+    column-rule: 1px solid rgba(22, 22, 22, 0.3);
   }
 
   .about-copy p {
     break-inside: avoid;
-    color: #484238;
+    color: #383838;
     font-size: 1.04rem;
     line-height: 1.68;
   }
@@ -955,7 +1265,7 @@ const projects = [
   .drop-cap::first-letter {
     float: left;
     margin: 8px 7px 0 0;
-    color: #7b2f2f;
+    color: #9b1212;
     font-size: 4.2rem;
     line-height: 0.68;
   }
@@ -963,15 +1273,29 @@ const projects = [
   .pull-quote {
     position: relative;
     padding: 29px 28px 26px 72px;
-    border-top: 1px solid #1b1915;
-    border-bottom: 1px solid #1b1915;
+    border-top: 1px solid #161616;
+    border-bottom: 1px solid #161616;
+    background:
+      radial-gradient(#161616 0.8px, transparent 0.8px);
+    background-size: 9px 9px;
+  }
+
+  .pull-quote::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  .pull-quote > * {
+    position: relative;
   }
 
   .quote-mark {
     position: absolute;
     top: 3px;
     left: 4px;
-    color: #7b2f2f;
+    color: #9b1212;
     font-size: 6rem;
     line-height: 1;
   }
@@ -985,7 +1309,7 @@ const projects = [
 
   .pull-quote p {
     margin-bottom: 0;
-    color: #6d6558;
+    color: #505050;
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.57rem;
     letter-spacing: 0.08em;
@@ -995,14 +1319,31 @@ const projects = [
   .focus-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid #1b1915;
-    border-bottom: 1px solid #1b1915;
+    border-top: 1px solid #161616;
+    border-bottom: 1px solid #161616;
   }
 
   .focus-grid article {
+    position: relative;
     min-height: 280px;
     padding: 26px 28px 30px;
-    border-right: 1px solid rgba(27, 25, 21, 0.5);
+    overflow: hidden;
+    border-right: 1px solid rgba(22, 22, 22, 0.55);
+  }
+
+  .focus-grid article::after {
+    position: absolute;
+    right: -22px;
+    bottom: -25px;
+    width: 95px;
+    height: 95px;
+    content: "";
+    border: 1px solid #161616;
+    background:
+      radial-gradient(#161616 1px, transparent 1px);
+    background-size: 8px 8px;
+    transform: rotate(28deg) skewY(-12deg);
+    opacity: 0.2;
   }
 
   .focus-grid article:last-child {
@@ -1010,7 +1351,6 @@ const projects = [
   }
 
   .focus-grid article > span {
-    color: #7b2f2f;
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.62rem;
   }
@@ -1025,54 +1365,231 @@ const projects = [
 
   .focus-grid p {
     margin-bottom: 0;
-    color: #514b40;
+    color: #404040;
     line-height: 1.55;
+  }
+
+  .writing-section {
+    display: grid;
+    grid-template-columns: 0.35fr 1.25fr 0.4fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .edition-tag {
+    margin-bottom: 14px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.59rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .writing-copy > p:not(.edition-tag) {
+    max-width: 680px;
+    margin: 24px 0 25px;
+    color: #404040;
+    font-size: 1.05rem;
+    line-height: 1.62;
+  }
+
+  .substack-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 0;
+    border-top: 1px solid #161616;
+    border-bottom: 1px solid #161616;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.63rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .writing-mark {
+    display: grid;
+    min-height: 250px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid #161616;
+    background: #161616;
+    color: #ffffff;
+    box-shadow: 10px 10px 0 rgba(22, 22, 22, 0.15);
+    transform: rotate(1.5deg);
+  }
+
+  .writing-mark span {
+    display: grid;
+    place-items: center;
+    border-right: 1px solid #f7f4ec;
+    border-bottom: 1px solid #f7f4ec;
+    font-size: 2.6rem;
+  }
+
+  .writing-mark span:nth-child(2) {
+    border-right: 0;
+  }
+
+  .writing-mark span:nth-child(3) {
+    grid-column: span 2;
+    border-right: 0;
+    border-bottom: 0;
+    font-style: italic;
   }
 
   .contact-section {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 80px;
-    align-items: end;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 75px;
+    align-items: start;
     padding: 110px 0 90px;
-    border-bottom: 4px double #1b1915;
+    border-bottom: 4px double #161616;
   }
 
-  .contact-copy {
-    padding-left: 28px;
-    border-left: 1px solid #1b1915;
+  .contact-intro {
+    position: sticky;
+    top: 70px;
   }
 
-  .contact-copy > p:first-child {
-    margin-bottom: 25px;
-    color: #4c463c;
-    font-size: 1.13rem;
-    line-height: 1.6;
+  .contact-intro h2 {
+    margin-bottom: 28px;
   }
 
-  .email-link {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 14px 0;
-    border-top: 1px solid #1b1915;
-    border-bottom: 1px solid #1b1915;
+  .contact-intro > p:not(.section-number) {
+    max-width: 480px;
+    margin-bottom: 15px;
+    color: #3e3e3e;
+    font-size: 1.06rem;
+    line-height: 1.62;
+  }
+
+  .contact-form {
+    padding: 30px;
+    border: 1px solid #161616;
+    background: #ffffff;
+    box-shadow:
+      12px 12px 0 rgba(155, 18, 18, 0.16),
+      inset 0 0 0 7px #ffffff,
+      inset 0 0 0 8px #161616;
+  }
+
+  .form-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .contact-form > label,
+  .form-grid label {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .contact-form label > span {
     font-family: "IBM Plex Mono", monospace;
-    font-size: clamp(0.7rem, 1.4vw, 0.9rem);
-    letter-spacing: 0.04em;
-  }
-
-  .email-link span {
-    color: #7b2f2f;
-  }
-
-  .contact-note {
-    margin: 11px 0 0;
-    color: #7a7163;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.06em;
+    font-size: 0.59rem;
+    font-weight: 500;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    border: 1px solid #161616;
+    border-radius: 0;
+    outline: 0;
+    background: #ffffff;
+    color: #161616;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    transition:
+      box-shadow 150ms ease,
+      transform 150ms ease;
+  }
+
+  .contact-form input,
+  .contact-form select {
+    min-height: 48px;
+    padding: 0 12px;
+  }
+
+  .contact-form textarea {
+    min-height: 170px;
+    padding: 12px;
+    resize: vertical;
+    line-height: 1.55;
+  }
+
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    box-shadow: 5px 5px 0 rgba(22, 22, 22, 0.16);
+    transform: translate(-2px, -2px);
+  }
+
+  .captcha-wrap {
+    min-height: 10px;
+    margin: 8px 0 18px;
+  }
+
+  .form-footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 25px;
+    align-items: end;
+    padding-top: 18px;
+    border-top: 1px solid #161616;
+  }
+
+  .form-footer p {
+    max-width: 370px;
+    margin-bottom: 0;
+    color: #555;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.53rem;
+    letter-spacing: 0.06em;
+    line-height: 1.55;
+    text-transform: uppercase;
+  }
+
+  .form-footer button {
+    display: inline-flex;
+    min-height: 49px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 18px;
+    border: 1px solid #161616;
+    border-radius: 0;
+    background: #161616;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.63rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .form-footer button:hover,
+  .form-footer button:focus-visible {
+    box-shadow: 5px 5px 0 rgba(22, 22, 22, 0.18);
+    transform: translate(-2px, -2px);
   }
 
   footer {
@@ -1080,31 +1597,48 @@ const projects = [
     justify-content: space-between;
     gap: 20px;
     padding: 22px 0 34px;
-    color: #675f52;
+    color: #4e4e4e;
     font-family: "IBM Plex Mono", monospace;
     font-size: 0.57rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
-  @media (max-width: 980px) {
+  @media (max-width: 1000px) {
     .hero {
       grid-template-columns: 1fr;
       gap: 54px;
     }
 
     .hero-copy {
-      max-width: 780px;
+      max-width: 800px;
     }
 
     .hero-illustration {
-      width: min(100%, 700px);
-      min-height: 610px;
+      width: min(100%, 720px);
+      min-height: 650px;
       margin-inline: auto;
     }
 
     .about-section {
       grid-template-columns: 1fr;
+    }
+
+    .writing-section {
+      grid-template-columns: 0.3fr 1fr;
+    }
+
+    .writing-mark {
+      display: none;
+    }
+
+    .contact-section {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .contact-intro {
+      position: static;
     }
   }
 
@@ -1115,7 +1649,7 @@ const projects = [
 
     .masthead-row {
       grid-template-columns: 1fr;
-      gap: 12px;
+      gap: 8px;
     }
 
     .masthead-note {
@@ -1145,7 +1679,7 @@ const projects = [
     }
 
     .hero-illustration {
-      min-height: 520px;
+      min-height: 560px;
     }
 
     .section {
@@ -1178,7 +1712,7 @@ const projects = [
     .focus-grid article {
       min-height: auto;
       border-right: 0;
-      border-bottom: 1px solid rgba(27, 25, 21, 0.5);
+      border-bottom: 1px solid rgba(22, 22, 22, 0.55);
     }
 
     .focus-grid article:last-child {
@@ -1189,26 +1723,22 @@ const projects = [
       margin-top: 36px;
     }
 
-    .contact-section {
+    .writing-section {
       grid-template-columns: 1fr;
-      gap: 44px;
+      gap: 22px;
     }
 
-    .contact-copy {
-      padding-left: 0;
-      border-left: 0;
+    .form-grid,
+    .form-footer {
+      grid-template-columns: 1fr;
+    }
+
+    .form-footer button {
+      width: 100%;
     }
   }
 
   @media (max-width: 520px) {
-    .issue-line {
-      grid-template-columns: 1fr auto;
-    }
-
-    .issue-line span:nth-child(2) {
-      display: none;
-    }
-
     .masthead {
       font-size: clamp(3.2rem, 18vw, 5rem);
     }
@@ -1227,20 +1757,21 @@ const projects = [
     }
 
     .hero-illustration {
-      min-height: 440px;
+      min-height: 455px;
     }
 
     .hero-illustration figcaption {
-      font-size: 0.49rem;
+      font-size: 0.47rem;
       line-height: 1.5;
     }
 
     .figure-footer {
-      font-size: 0.47rem;
+      font-size: 0.45rem;
     }
 
     .section-heading h2,
     .about-heading h2,
+    .writing-section h2,
     .contact-section h2 {
       font-size: clamp(3rem, 15vw, 4.7rem);
     }
@@ -1261,9 +1792,29 @@ const projects = [
       padding-left: 54px;
     }
 
+    .contact-form {
+      padding: 22px;
+      box-shadow:
+        7px 7px 0 rgba(155, 18, 18, 0.15),
+        inset 0 0 0 5px #ffffff,
+        inset 0 0 0 6px #161616;
+    }
+
     footer {
       flex-direction: column;
       gap: 8px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+
+    .tilt-surface,
+    .button,
+    .project-card {
+      transition: none !important;
+      transform: none !important;
     }
   }
 </style>
