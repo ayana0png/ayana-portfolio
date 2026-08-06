@@ -33,47 +33,27 @@ body {
   min-width: 320px;
   margin: 0;
   overflow-x: hidden;
-  background: var(--paper);
+  background-color: #f6f7f9;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    radial-gradient(
+      circle at top left,
+      #ffffff 0%,
+      #f7f8fa 45%,
+      #eef1f4 100%
+    );
+  background-size:
+    32px 32px,
+    32px 32px,
+    100% 100%;
+  background-attachment: fixed;
   color: var(--ink);
   font-family: "Newsreader", Georgia, serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
-body::before {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  content: "";
-  pointer-events: none;
 
-  background-image: url("/images/ui/newsprint-wash.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-
-  filter: grayscale(1) contrast(0.88);
-  opacity: 0.24;
-}
-
-body::after {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  content: "";
-  pointer-events: none;
-
-  background:
-    linear-gradient(
-      rgba(247, 247, 244, 0.58),
-      rgba(247, 247, 244, 0.58)
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0,
-      transparent 5px,
-      rgba(0, 0, 0, 0.012) 6px
-    );
-}
 
 ::selection {
   background: var(--ink);
