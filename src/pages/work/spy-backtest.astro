@@ -1,0 +1,352 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout
+  title="SPY One-Day Dip-Reversion Backtest — Ayana Ahuja"
+  description="A Python backtest examining next-session SPY performance after large daily declines within a long-term uptrend."
+>
+  <Header />
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Quantitative project / Q1</p>
+
+      <div>
+        <h1>SPY One-Day Dip-Reversion Backtest</h1>
+
+        <p class="page-intro">
+          A Python backtest examining whether SPY tends to recover during the
+          next trading session after falling more than 2% while remaining above
+          its 200-day moving average.
+        </p>
+
+        <div class="project-actions">
+          <a
+            class="button button-dark"
+            href="https://github.com/ayana0png/SPY-One-Day-Dip-Reversion-Backtest"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View code on GitHub ↗
+          </a>
+
+          <a class="button button-light" href="/work">
+            ← Return to projects
+          </a>
+        </div>
+
+        <p class="runtime-note">
+          Python · Pandas · yfinance · Matplotlib · Quantitative research
+        </p>
+      </div>
+    </section>
+
+    <section class="section project-story">
+      <div>
+        <p class="section-number">01</p>
+        <p class="section-label">Research question</p>
+      </div>
+
+      <div class="story-copy">
+        <h2>Do large SPY declines tend to reverse during the next session?</h2>
+
+        <p class="drop-cap">
+          The study identifies trading sessions in which SPY falls more than
+          2% but remains above its 200-day moving average.
+        </p>
+
+        <p>
+          A signal is recorded after the market closes. The simulated trade
+          enters at the following session’s opening price and exits at that
+          session’s closing price.
+        </p>
+
+        <p>
+          The 200-day moving average acts as a trend filter, limiting the study
+          to short-term declines occurring while SPY remains within a broader
+          upward trend.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="section-number">02</p>
+          <p class="section-label">Method</p>
+        </div>
+
+        <h2>Signal, entry, exit, and evaluation.</h2>
+      </div>
+
+      <div class="method-list">
+        <div>
+          <span>01</span>
+          <p>Download adjusted daily SPY price data.</p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <p>Calculate daily returns and the 200-day moving average.</p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <p>
+            Generate a signal when SPY falls more than 2% and closes above its
+            200-day moving average.
+          </p>
+        </div>
+
+        <div>
+          <span>04</span>
+          <p>Enter at the next session’s open and exit at its close.</p>
+        </div>
+
+        <div>
+          <span>05</span>
+          <p>
+            Measure win rate, average return, median return, cumulative trade
+            return, and best and worst trades.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="section-number">03</p>
+          <p class="section-label">Results</p>
+        </div>
+
+        <h2>Compounded returns across recorded trades.</h2>
+      </div>
+
+      <figure class="results-figure">
+        <img
+          src="/images/spy-backtest/spy_dip_reversion_results.png"
+          alt="Chart showing compounded returns from the SPY dip-reversion backtest"
+        />
+
+        <figcaption>
+          <span>Backtest output</span>
+
+          <p>
+            The chart shows the compounded return of the recorded trades. It
+            does not represent continuous investment in SPY or a comparison
+            with a buy-and-hold benchmark.
+          </p>
+        </figcaption>
+      </figure>
+    </section>
+
+ <section class="section limitations-section">
+  <div>
+    <p class="section-number">04</p>
+    <p class="section-label">Revision and limitations</p>
+  </div>
+
+  <div>
+    <h2>What I learned after building the first version.</h2>
+
+    <p class="page-intro">
+      After completing the initial backtest, I realized that it assumed a trade
+      could be entered at the same closing price used to generate the signal.
+      I revised the methodology so the signal is confirmed at the close, the
+      trade enters at the next session’s open, and exits at that session’s
+      close. This created a more realistic and reproducible study.
+    </p>
+
+    <p class="page-intro">
+      The results still exclude commissions, taxes, slippage, execution delays,
+      and other real-world trading constraints. The strict signal conditions
+      also produced a relatively small number of trades, so the results should
+      be treated as an exploratory historical study rather than evidence of a
+      proven trading strategy.
+    </p>
+  </div>
+</section>
+    <section class="section repository-section">
+      <div>
+        <p class="section-number">Project files</p>
+        <h2>Explore the study.</h2>
+      </div>
+
+      <div class="repository-panel">
+        <p>
+          The GitHub repository contains the Python backtest, generated chart,
+          trade data, and project documentation.
+        </p>
+
+        <a
+          class="button button-dark"
+          href="https://github.com/ayana0png/SPY-One-Day-Dip-Reversion-Backtest"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open GitHub repository ↗
+        </a>
+      </div>
+    </section>
+
+    <nav class="project-navigation" aria-label="Project navigation">
+      <a href="/work">← Return to projects</a>
+      <a href="/#contact">Contact ↗</a>
+    </nav>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .runtime-note {
+    margin: 17px 0 0;
+    color: var(--muted-ink);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.56rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .project-story,
+  .limitations-section,
+  .repository-section {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+    gap: 48px;
+  }
+
+  .story-copy {
+    max-width: 850px;
+  }
+
+  .story-copy h2 {
+    margin-bottom: 32px;
+  }
+
+  .story-copy > p {
+    color: #3d3d3d;
+    font-size: 1.07rem;
+    line-height: 1.7;
+  }
+
+  .method-list {
+    border-top: 1px solid var(--ink);
+  }
+
+  .method-list > div {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 24px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .method-list span {
+    color: var(--accent);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.58rem;
+  }
+
+  .method-list p {
+    margin: 0;
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    line-height: 1.15;
+  }
+
+  .results-figure {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--ink);
+    background: #ffffff;
+  }
+
+  .results-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .results-figure figcaption {
+    padding: 22px;
+  }
+
+  .results-figure figcaption span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .results-figure figcaption p {
+    max-width: 760px;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .repository-panel {
+    padding: 30px;
+    border: 1px solid var(--ink);
+    background:
+      radial-gradient(#171717 0.7px, transparent 0.7px);
+    background-size: 9px 9px;
+  }
+
+  .repository-panel p {
+    max-width: 690px;
+    margin-bottom: 24px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.94);
+    font-size: 1.06rem;
+    line-height: 1.62;
+  }
+
+  .project-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 0 84px;
+    border-top: 4px double var(--ink);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.61rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 760px) {
+    .project-story,
+    .limitations-section,
+    .repository-section {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .project-actions {
+      flex-direction: column;
+    }
+
+    .project-actions .button {
+      width: 100%;
+    }
+
+    .project-navigation {
+      flex-direction: column;
+    }
+  }
+</style>

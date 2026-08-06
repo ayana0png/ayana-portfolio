@@ -1,0 +1,375 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const features = [
+  "Local two-player gameplay",
+  "Movement rules for every chess piece",
+  "Turn enforcement and captures",
+  "Check, checkmate, and stalemate detection",
+  "Castling, en passant, and pawn promotion",
+  "Undo, restart, and move history",
+  "Automated engine tests",
+];
+---
+
+<BaseLayout
+  title="Digital Chess — Ayana Ahuja"
+  description="A Java chess game with a graphical interface, complete move rules, undo functionality, and automated testing."
+>
+  <Header />
+
+  <main>
+    <section class="page-hero chess-hero">
+      <p class="eyebrow">Software project / S1</p>
+
+      <div>
+        <h1>Digital Chess Game</h1>
+
+        <p class="page-intro">
+          A Java chess game with a graphical interface, complete move rules,
+          undo functionality, and automated testing.
+        </p>
+
+        <div class="project-actions">
+          <a
+            class="button button-dark"
+            href="https://github.com/ayana0png/digital-chess"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View code on GitHub
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button button-light" href="/work">
+            Return to projects
+            <span aria-hidden="true">←</span>
+          </a>
+        </div>
+
+        <p class="runtime-note">
+          Java · Swing · Object-oriented programming · Automated testing
+        </p>
+      </div>
+    </section>
+
+    <section class="section project-story">
+      <div>
+        <p class="section-number">01</p>
+        <p class="section-label">Project overview</p>
+      </div>
+
+      <div class="story-copy">
+        <h2>Multiplayer Chess.</h2>
+
+        <p class="drop-cap">
+          This project started off simple by using a two-dimensional character
+          array to represent a chessboard and validate basic pawn movement.
+        </p>
+
+        <p>
+          After establishing the basics and understanding the skeleton of the
+          logic, I expanded it into a local two-player application with an
+          object-oriented rules engine, a Java Swing interface, legal-move
+          validation, game-state tracking, and automated tests.
+        </p>
+
+        <p>
+          The interface sends each requested move to the chess engine, which
+          determines whether the move is valid. Keeping the rules separate from
+          the interface makes the program easier to test and maintain.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="section-number">02</p>
+          <p class="section-label">Implemented features</p>
+        </div>
+
+        <h2>Core gameplay, rules, and state management.</h2>
+      </div>
+
+      <div class="feature-list">
+        {
+          features.map((feature, index) => (
+            <div>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p>{feature}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="section-number">03</p>
+          <p class="section-label">Inside the project</p>
+        </div>
+
+        <h2>Interface, logic, and game-state development.</h2>
+      </div>
+
+      <div class="project-gallery">
+        <figure>
+          <img
+            src="/images/digital-chess/game-interface.png"
+            alt="Digital Chess game interface"
+            loading="lazy"
+          />
+
+          <figcaption>
+            <span>01 / Interface</span>
+
+            <p>
+              The Java Swing interface displays the board, tracks turns, and
+              sends each attempted move to the chess engine for validation.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/images/digital-chess/move-logic.png"
+            alt="Digital Chess movement logic shown in the code editor"
+            loading="lazy"
+          />
+
+          <figcaption>
+            <span>02 / Rules engine</span>
+
+            <p>
+              Movement rules are kept separate from the interface so legal
+              moves, captures, check states, and special rules can be tested
+              independently.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="/images/digital-chess/testing.png"
+            alt="Digital Chess automated test results"
+            loading="lazy"
+          />
+
+          <figcaption>
+            <span>03 / Testing</span>
+
+            <p>
+              Automated tests verify movement, game-state transitions, special
+              rules, and invalid actions before changes reach the interface.
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section repository-section">
+      <div>
+        <p class="section-number">Project files</p>
+        <h2>Explore the source code.</h2>
+      </div>
+
+      <div class="repository-panel">
+        <p>
+          The GitHub repository contains the Java source files, engine tests,
+          launch scripts, architecture notes, and project documentation.
+        </p>
+
+        <a
+          class="button button-dark"
+          href="https://github.com/ayana0png/digital-chess"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open GitHub repository
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <nav class="project-navigation" aria-label="Project navigation">
+      <a href="/work">← Return to projects</a>
+      <a href="/#contact">Contact ↗</a>
+    </nav>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .chess-hero h1 {
+    max-width: 900px;
+  }
+
+  .project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .runtime-note {
+    margin: 17px 0 0;
+    color: var(--muted-ink);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.56rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .project-story,
+  .repository-section {
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr;
+    gap: 48px;
+  }
+
+  .story-copy {
+    max-width: 850px;
+  }
+
+  .story-copy h2 {
+    margin-bottom: 32px;
+  }
+
+  .story-copy > p {
+    color: #3d3d3d;
+    font-size: 1.07rem;
+    line-height: 1.7;
+  }
+
+  .feature-list {
+    border-top: 1px solid var(--ink);
+  }
+
+  .feature-list > div {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 24px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .feature-list span {
+    color: var(--accent);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.58rem;
+  }
+
+  .feature-list p {
+    margin-bottom: 0;
+    font-size: clamp(1.35rem, 2.4vw, 2.3rem);
+    line-height: 1.08;
+  }
+
+  .project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .project-gallery figure {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--ink);
+    background: #ffffff;
+  }
+
+  .project-gallery figure:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .project-gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-bottom: 1px solid var(--ink);
+    background: #eceae6;
+  }
+
+  .project-gallery figcaption {
+    padding: 20px;
+  }
+
+  .project-gallery figcaption span {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .project-gallery figcaption p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .repository-panel {
+    padding: 30px;
+    border: 1px solid var(--ink);
+    background:
+      radial-gradient(#171717 0.7px, transparent 0.7px);
+    background-size: 9px 9px;
+  }
+
+  .repository-panel p {
+    max-width: 690px;
+    margin-bottom: 24px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.94);
+    font-size: 1.06rem;
+    line-height: 1.62;
+  }
+
+  .project-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 28px 0 84px;
+    border-top: 4px double var(--ink);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.61rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 760px) {
+    .project-story,
+    .repository-section {
+      grid-template-columns: 1fr;
+    }
+
+    .project-gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .project-gallery figure:first-child {
+      grid-column: auto;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .project-actions {
+      flex-direction: column;
+    }
+
+    .project-actions .button {
+      width: 100%;
+    }
+
+    .project-navigation {
+      flex-direction: column;
+    }
+  }
+</style>
