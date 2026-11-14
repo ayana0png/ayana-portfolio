@@ -45,7 +45,8 @@ const projects = [
   title: "Circles",
   description:
     "A gamified social discovery app designed to make exploring your city and connecting with others feel more natural. Developed from interviews with young adults in San Francisco, Circles combines local discovery, shared experiences, and real-world quests to create opportunities for meaningful connection.",
-  href: "/work/circles/",
+  href: "/work/circles/", 
+linkLabel: "Open Project",
   figmaHref: " https://www.figma.com/design/GMbtkDTKh8Rzan9DbN0dY0/CIRCLES-Mobile-App---Main?t=LrkCB3Znov50WCrO-1",
   available: true,
 },
@@ -100,16 +101,30 @@ const projects = [
               <h3>{project.title}</h3>
               <p class="work-description">{project.description}</p>
 
-              {
-                project.available ? (
-                  <a class="project-link" href={project.href}>
-                    {project.linkLabel}
-                    <span aria-hidden="true">↗</span>
-                  </a>
-                ) : (
-                  <span class="project-status">{project.linkLabel}</span>
-                )
-              }
+            <div class="project-actions">
+  {
+    project.available ? (
+      <a class="project-link" href={project.href}>
+        {project.linkLabel}
+        <span aria-hidden="true">↗</span>
+      </a>
+    ) : (
+      <span class="project-status">{project.linkLabel}</span>
+    )
+  }
+
+  {project.figmaHref && (
+    <a
+      class="project-link"
+      href={project.figmaHref}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Live Figma prototype
+      <span aria-hidden="true">↗</span>
+    </a>
+  )}
+</div>
             </article>
           ))
         }
